@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ana‑Rose — AI Command Center (Test)</title>
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #171a2b;
+      --muted: #aab1c6;
+      --text: #e6e9f5;
+      --accent: #7aa2ff;
+      --accent-2: #00d4a7;
+      --danger: #ff6b6b;
+      --ok: #78e08f;
+      --warn: #ffd166;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #0b0e1a, #13162a 60%, #0b0e1a);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 20px 40px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo {
+      width: 14px; height: 14px; border-radius: 4px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 22px rgba(122,162,255,0.45);
+    }
+    .title {
+      font-weight: 700; letter-spacing: 0.2px;
+    }
+    .clock {
+      color: var(--muted); font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+    }
+    .card {
+      background: rgba(23,26,43,0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 16px 16px 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #0b0e1a;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+    ul { margin: 8px 0 0 18px; }
+    li { margin: 6px 0; }
+    .kpi { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+    .kpi .chip {
+      padding: 6px 10px; border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; font-size: 12px; color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+    .emails .row {
+      display: grid;
+      grid-template-columns: 62px 1fr 70px;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      margin-top: 8px;
+    }
+    .pct {
+      font-weight: 700;
+    }
+    .pct.red { color: var(--danger); }
+    .pct.yellow { color: var(--warn); }
+    .pct.green { color: var(--ok); }
+    .btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      color: #0b0e1a;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 8px 22px rgba(0,212,167,0.25);
+    }
+    .actions {
+      display:flex; gap:10px; flex-wrap: wrap; margin-top: 10px;
+    }
+    .small { font-size: 12px; color: var(--muted); }
+    footer { margin-top: 14px; text-align: right; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="title">Ana‑Rose — AI Command Center (Test)</div>
+      </div>
+      <div class="clock" id="clock">Loading time…</div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>🌍 Daily World & Economic Brief <span class="pill">FR / EN</span></h2>
+        <div class="dual">
+          <div>
+            <strong>FR — Monde / Business / Tech</strong>
+            <ul>
+              <li><em>Monde:</em> Points clés du jour (exemple).</li>
+              <li><em>Business:</em> Résumé façon FT / The Economist (exemple).</li>
+              <li><em>Tech:</em> IA, marchés, innovation (exemple).</li>
+            </ul>
+            <div class="kpi">
+              <div class="chip">Chiffre clé: 3.2%</div>
+              <div class="chip">Indice: 4,512</div>
+            </div>
+          </div>
+          <div>
+            <strong>EN — World / Business / Tech</strong>
+            <ul>
+              <li><em>World:</em> Top headlines of the day (sample).</li>
+              <li><em>Business:</em> FT / Economist‑style brief (sample).</li>
+              <li><em>Tech:</em> AI, markets, innovation (sample).</li>
+            </ul>
+            <div class="kpi">
+              <div class="chip">Key number: 3.2%</div>
+              <div class="chip">Index: 4,512</div>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://chat.openai.com" target="_blank" rel="noopener">Ask Ana‑Rose AI</a>
+          <span class="small">Click to ask questions or request replies to emails.</span>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>✅ Today’s Plan / Plan du jour</h2>
+        <ul>
+          <li><strong>08:30</strong> Meeting — prep 3 bullets (sample).</li>
+          <li><strong>12:00</strong> Study block — Finance chap. 3 (sample).</li>
+          <li><strong>16:00</strong> Reply to Prof. Smith (sample).</li>
+        </ul>
+        <div class="kpi">
+          <div class="chip">Focus #1</div>
+          <div class="chip">Focus #2</div>
+          <div class="chip">Focus #3</div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card emails">
+      <h2>📩 Important Emails (AI triage) / E‑mails importants</h2>
+      <div class="row">
+        <div class="pct red">92%</div>
+        <div><strong>Prof. Finance</strong> — need slides by EOD (sample)</div>
+        <button class="btn">Suggest Reply</button>
+      </div>
+      <div class="row">
+        <div class="pct yellow">63%</div>
+        <div><strong>Internship</strong> — schedule interview (sample)</div>
+        <button class="btn">Suggest Reply</button>
+      </div>
+      <div class="row">
+        <div class="pct green">18%</div>
+        <div><strong>Newsletter</strong> — weekly digest (sample)</div>
+        <button class="btn">Ignore</button>
+      </div>
+    </section>
+
+    <footer>
+      Test dashboard — Last updated: <span id="updated">2025-10-01 14:08 UTC</span>
+    </footer>
+  </div>
+
+  <script>
+    function updateClock() {
+      const el = document.getElementById('clock');
+      const now = new Date();
+      el.textContent = now.toLocaleString([], { hour: '2-digit', minute: '2-digit' }) + " • " + now.toDateString();
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+    // Light auto-refresh every 10 minutes (Plash-friendly)
+    setTimeout(() => window.location.reload(), 10 * 60 * 1000);
+  </script>
+</body>
+</html>
