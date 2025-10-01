@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "score": 92,
+      "from": "Prof. Finance",
+      "subject": "Slides by EOD",
+      "suggest": true
+    },
+    {
+      "score": 63,
+      "from": "Recruiter",
+      "subject": "Interview scheduling",
+      "suggest": true
+    },
+    {
+      "score": 18,
+      "from": "Newsletter",
+      "subject": "Weekly digest",
+      "suggest": false
+    }
+  ]
+}

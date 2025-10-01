@@ -1,0 +1,39 @@
+{
+  "fr": {
+    "sections": [
+      {
+        "title": "Monde",
+        "text": "Titres clés du jour (exemple)."
+      },
+      {
+        "title": "Business",
+        "text": "Résumé style FT / The Economist (exemple)."
+      },
+      {
+        "title": "Tech",
+        "text": "IA, marchés, innovation (exemple)."
+      }
+    ]
+  },
+  "en": {
+    "sections": [
+      {
+        "title": "World",
+        "text": "Top headlines of the day (sample)."
+      },
+      {
+        "title": "Business",
+        "text": "FT / Economist‑style brief (sample)."
+      },
+      {
+        "title": "Tech",
+        "text": "AI, markets, innovation (sample)."
+      }
+    ]
+  },
+  "kpi": [
+    "Key number: 3.2%",
+    "Index: 4,512"
+  ],
+  "story": "Here’s why today’s developments matter (sample text)."
+}

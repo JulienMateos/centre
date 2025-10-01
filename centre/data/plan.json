@@ -1,0 +1,30 @@
+{
+  "hard": [
+    {
+      "time": "08:30",
+      "text": "Meeting — prep 3 bullets (sample)"
+    },
+    {
+      "time": "12:00",
+      "text": "Study block — Finance ch.3 (sample)"
+    },
+    {
+      "time": "16:00",
+      "text": "Reply to Prof. (sample)"
+    }
+  ],
+  "must": [
+    "Finish slide deck",
+    "Email internship",
+    "Workout 30'"
+  ],
+  "nice": [
+    "Read 10 pages",
+    "Tidy desk"
+  ],
+  "focus": [
+    "1: Deep work",
+    "2: Ship email",
+    "3: No distractions"
+  ]
+}
